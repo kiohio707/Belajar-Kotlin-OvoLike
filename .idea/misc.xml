@@ -3,7 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Semester 8/Belajar Android/OvoLike/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Semester 8/Belajar Android/OvoLike/app/src/main/res/drawable/ic_history.xml" value="0.15925925925925927" />
+        <entry key="..\:/Semester 8/Belajar Android/OvoLike/app/src/main/res/drawable/ic_notification.xml" value="0.1" />
+        <entry key="..\:/Semester 8/Belajar Android/OvoLike/app/src/main/res/drawable/ic_topup.xml" value="0.15925925925925927" />
+        <entry key="..\:/Semester 8/Belajar Android/OvoLike/app/src/main/res/drawable/ic_transfer.xml" value="0.15925925925925927" />
+        <entry key="..\:/Semester 8/Belajar Android/OvoLike/app/src/main/res/layout/activity_main.xml" value="0.5" />
+        <entry key="..\:/Semester 8/Belajar Android/OvoLike/app/src/main/res/menu/menu_notification_main.xml" value="0.18" />
       </map>
     </option>
   </component>

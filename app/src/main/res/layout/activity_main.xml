@@ -31,12 +31,12 @@
             android:layout_height="match_parent">
 
             <ImageView
+                android:id="@+id/iv_background_main"
                 android:layout_width="0dp"
                 android:layout_height="150dp"
                 android:src="@drawable/img_background"
                 android:adjustViewBounds="true"
                 android:scaleType="centerCrop"
-                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -105,10 +105,100 @@
                 app:layout_constraintStart_toEndOf="@id/tv_title_ovo_point_main"
                 app:layout_constraintTop_toBottomOf="@id/tv_ovo_cash_main"
                 tools:ignore="HardcodedText,SmallSp" />
+
+            <Space
+                android:id="@+id/space_background_main"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/iv_background_main"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="15dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/space_background_main">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp">
+
+                    <ImageView
+                        android:id="@+id/iv_topup_main"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="15dp"
+                        android:src="@drawable/ic_topup"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/iv_transfer_main"
+                        app:layout_constraintHorizontal_chainStyle="spread_inside"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_topup_main"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Top Up"
+                        android:textColor="@color/ovo"
+                        app:layout_constraintEnd_toEndOf="@+id/iv_topup_main"
+                        app:layout_constraintStart_toStartOf="@+id/iv_topup_main"
+                        app:layout_constraintTop_toBottomOf="@+id/iv_topup_main" />
+
+                    <ImageView
+                        android:id="@+id/iv_transfer_main"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/ic_transfer"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/iv_topup_main"
+                        app:layout_constraintEnd_toStartOf="@id/iv_history_main"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_transfer_main"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Transfer"
+                        android:textColor="@color/ovo"
+                        app:layout_constraintEnd_toEndOf="@+id/iv_transfer_main"
+                        app:layout_constraintStart_toStartOf="@+id/iv_transfer_main"
+                        app:layout_constraintTop_toBottomOf="@+id/iv_transfer_main" />
+
+                    <ImageView
+                        android:id="@+id/iv_history_main"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/ic_history"
+                        android:layout_marginEnd="15dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/iv_transfer_main"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_history_main"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Riwayat"
+                        android:textColor="@color/ovo"
+                        app:layout_constraintEnd_toEndOf="@+id/iv_history_main"
+                        app:layout_constraintStart_toStartOf="@+id/iv_history_main"
+                        app:layout_constraintTop_toBottomOf="@+id/iv_history_main" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.core.widget.NestedScrollView>
-
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
