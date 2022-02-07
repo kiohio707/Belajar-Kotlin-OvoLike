@@ -2,7 +2,9 @@ package com.example.ovolike
 
 import android.os.Bundle
 import android.widget.Toast
+import com.example.ovolike.adapter.PurchaseAdapter
 import com.example.ovolike.databinding.ActivityMainBinding
+import com.example.ovolike.model.PurchaseModel
 
 class MainActivity : HelperActivity() {
     lateinit var binding : ActivityMainBinding
@@ -36,6 +38,25 @@ class MainActivity : HelperActivity() {
             Toast.makeText(this, "Riwayat", Toast.LENGTH_SHORT).show()
         }
 
+        //Set Adapter ke Recycler View
+        binding.recViewPurchase.adapter = purchaseAdapter
+    }
 
+    val purchaseAdapter by lazy {
+        val item = mutableListOf<PurchaseModel>(
+            PurchaseModel(1, "PLN", R.drawable.ic_electric),
+            PurchaseModel(2, "Pulsa", R.drawable.ic_phone),
+            PurchaseModel(3, "Voucher Game", R.drawable.ic_game),
+            PurchaseModel(4, "Investasi", R.drawable.ic_invest),
+            PurchaseModel(5, "BPJS", R.drawable.ic_bpjs),
+            PurchaseModel(6, "Internet & TV Kabel", R.drawable.ic_tv),
+            PurchaseModel(7, "Proteksi", R.drawable.ic_proteksi),
+            PurchaseModel(8, "Lainnya", R.drawable.ic_other),
+        )
+        PurchaseAdapter(item, object: PurchaseAdapter.AdapterListener{
+            override fun onClick(purchaseModel: PurchaseModel) {
+                Toast.makeText(applicationContext, purchaseModel.text, Toast.LENGTH_SHORT).show()
+            }
+        })
     }
 }
