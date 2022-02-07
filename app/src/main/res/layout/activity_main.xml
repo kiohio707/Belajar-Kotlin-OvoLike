@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    >
 
     <com.google.android.material.appbar.MaterialToolbar
         android:background="@color/ovo"
@@ -15,7 +16,8 @@
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        />
 
 
     <androidx.core.widget.NestedScrollView
@@ -24,11 +26,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar_main"
-        app:layout_constraintBottom_toBottomOf="parent">
+        app:layout_constraintBottom_toBottomOf="parent"
+        >
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            >
 
             <ImageView
                 android:id="@+id/iv_background_main"
@@ -39,7 +43,8 @@
                 android:scaleType="centerCrop"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                />
 
             <TextView
                 android:id="@+id/tv_title_ovo_cash_main"
@@ -51,7 +56,8 @@
                 android:textColor="@color/white"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                tools:ignore="HardcodedText" />
+                tools:ignore="HardcodedText"
+                />
 
             <TextView
                 android:id="@+id/tv_rupiah_main"
@@ -65,7 +71,8 @@
                 android:textColor="@color/white"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tv_title_ovo_cash_main"
-                tools:ignore="HardcodedText,SmallSp" />
+                tools:ignore="HardcodedText,SmallSp"
+                />
 
             <TextView
                 android:id="@+id/tv_ovo_cash_main"
@@ -79,7 +86,8 @@
                 android:textColor="@color/white"
                 app:layout_constraintStart_toStartOf="@id/tv_rupiah_main"
                 app:layout_constraintTop_toBottomOf="@id/tv_title_ovo_cash_main"
-                tools:ignore="HardcodedText,SmallSp" />
+                tools:ignore="HardcodedText,SmallSp"
+                />
 
             <TextView
                 android:id="@+id/tv_title_ovo_point_main"
@@ -91,7 +99,8 @@
                 android:textColor="@color/white"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tv_ovo_cash_main"
-                tools:ignore="HardcodedText" />
+                tools:ignore="HardcodedText"
+                />
 
             <TextView
                 android:id="@+id/tv_ovo_point_main"
@@ -104,7 +113,8 @@
                 android:textColor="@android:color/holo_orange_dark"
                 app:layout_constraintStart_toEndOf="@id/tv_title_ovo_point_main"
                 app:layout_constraintTop_toBottomOf="@id/tv_ovo_cash_main"
-                tools:ignore="HardcodedText,SmallSp" />
+                tools:ignore="HardcodedText,SmallSp"
+                />
 
             <Space
                 android:id="@+id/space_background_main"
@@ -112,7 +122,8 @@
                 android:layout_height="40dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintBottom_toBottomOf="@id/iv_background_main"/>
+                app:layout_constraintBottom_toBottomOf="@id/iv_background_main"
+                />
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/card_view_payment"
@@ -124,12 +135,14 @@
                 app:cardElevation="5dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@id/space_background_main">
+                app:layout_constraintTop_toTopOf="@id/space_background_main"
+                >
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:padding="5dp">
+                    android:padding="5dp"
+                    >
 
                     <ImageView
                         android:id="@+id/iv_topup_main"
@@ -141,7 +154,8 @@
                         app:layout_constraintEnd_toStartOf="@id/iv_transfer_main"
                         app:layout_constraintHorizontal_chainStyle="spread_inside"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
+                        app:layout_constraintTop_toTopOf="parent"
+                        />
 
                     <TextView
                         android:id="@+id/tv_topup_main"
@@ -151,7 +165,8 @@
                         android:textColor="@color/ovo"
                         app:layout_constraintEnd_toEndOf="@+id/iv_topup_main"
                         app:layout_constraintStart_toStartOf="@+id/iv_topup_main"
-                        app:layout_constraintTop_toBottomOf="@+id/iv_topup_main" />
+                        app:layout_constraintTop_toBottomOf="@+id/iv_topup_main"
+                        />
 
                     <ImageView
                         android:id="@+id/iv_transfer_main"
@@ -161,7 +176,8 @@
                         android:layout_marginTop="10dp"
                         app:layout_constraintStart_toEndOf="@id/iv_topup_main"
                         app:layout_constraintEnd_toStartOf="@id/iv_history_main"
-                        app:layout_constraintTop_toTopOf="parent" />
+                        app:layout_constraintTop_toTopOf="parent"
+                        />
 
                     <TextView
                         android:id="@+id/tv_transfer_main"
@@ -171,7 +187,8 @@
                         android:textColor="@color/ovo"
                         app:layout_constraintEnd_toEndOf="@+id/iv_transfer_main"
                         app:layout_constraintStart_toStartOf="@+id/iv_transfer_main"
-                        app:layout_constraintTop_toBottomOf="@+id/iv_transfer_main" />
+                        app:layout_constraintTop_toBottomOf="@+id/iv_transfer_main"
+                        />
 
                     <ImageView
                         android:id="@+id/iv_history_main"
@@ -182,7 +199,8 @@
                         android:layout_marginTop="10dp"
                         app:layout_constraintStart_toEndOf="@id/iv_transfer_main"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
+                        app:layout_constraintTop_toTopOf="parent"
+                        />
 
                     <TextView
                         android:id="@+id/tv_history_main"
@@ -192,7 +210,8 @@
                         android:textColor="@color/ovo"
                         app:layout_constraintEnd_toEndOf="@+id/iv_history_main"
                         app:layout_constraintStart_toStartOf="@+id/iv_history_main"
-                        app:layout_constraintTop_toBottomOf="@+id/iv_history_main" />
+                        app:layout_constraintTop_toBottomOf="@+id/iv_history_main"
+                        />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -207,10 +226,114 @@
                 tools:listitem="@layout/adapter_purchase"
                 app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
                 app:spanCount="4"
+                tools:visibility="gone"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/card_view_payment"/>
+                app:layout_constraintTop_toBottomOf="@id/card_view_payment"
+                />
 
+            <View
+                android:id="@+id/view_line_purchase"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/line"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rec_view_purchase"
+                />
+
+            <TextView
+                android:id="@+id/tv_promo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Info dan Promo Spesial"
+                android:textSize="18sp"
+                android:textColor="@color/ovo"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@id/card_view_payment"
+                app:layout_constraintEnd_toEndOf="@id/card_view_payment"
+                app:layout_constraintTop_toBottomOf="@id/view_line_purchase"
+                />
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/view_pager_promo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_promo"
+                />
+
+            <com.tbuonomo.viewpagerdotsindicator.DotsIndicator
+                android:id="@+id/dots_indicator_promo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:dotsColor="@color/line"
+                app:selectedDotColor="@color/ovo"
+                app:dotsSize="10dp"
+                app:dotsSpacing="4dp"
+                app:dotsCornerRadius="10dp"
+                app:dotsWidthFactor="2.5"
+                app:progressMode="false"
+                android:layout_marginTop="5dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/view_pager_promo"
+                />
+
+            <View
+                android:id="@+id/view_line_promo"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/line"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/dots_indicator_promo"
+                />
+
+            <TextView
+                android:id="@+id/tv_recomendation"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Rekomendasi"
+                android:textSize="18sp"
+                android:textColor="@color/ovo"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@id/card_view_payment"
+                app:layout_constraintEnd_toEndOf="@id/card_view_payment"
+                app:layout_constraintTop_toBottomOf="@id/view_line_promo"
+                />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rec_view_rekomendation"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                tools:listitem="@layout/adapter_purchase"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:orientation="horizontal"
+                app:spanCount="4"
+                tools:visibility="visible"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_recomendation"
+                />
+
+            <View
+                android:id="@+id/view_line_recomendation"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/line"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rec_view_rekomendation"
+                />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.core.widget.NestedScrollView>

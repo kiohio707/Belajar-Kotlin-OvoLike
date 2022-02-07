@@ -2,8 +2,10 @@ package com.example.ovolike
 
 import android.os.Bundle
 import android.widget.Toast
+import com.example.ovolike.adapter.PromoAdapter
 import com.example.ovolike.adapter.PurchaseAdapter
 import com.example.ovolike.databinding.ActivityMainBinding
+import com.example.ovolike.model.PromoModel
 import com.example.ovolike.model.PurchaseModel
 
 class MainActivity : HelperActivity() {
@@ -40,10 +42,14 @@ class MainActivity : HelperActivity() {
 
         //Set Adapter ke Recycler View
         binding.recViewPurchase.adapter = purchaseAdapter
+
+        //Set Adapter ke View Pager
+        binding.viewPagerPromo.adapter = promoAdapter
+        binding.dotsIndicatorPromo.setViewPager2( binding.viewPagerPromo)
     }
 
     val purchaseAdapter by lazy {
-        val item = mutableListOf<PurchaseModel>(
+        val items = mutableListOf<PurchaseModel>(
             PurchaseModel(1, "PLN", R.drawable.ic_electric),
             PurchaseModel(2, "Pulsa", R.drawable.ic_phone),
             PurchaseModel(3, "Voucher Game", R.drawable.ic_game),
@@ -53,9 +59,22 @@ class MainActivity : HelperActivity() {
             PurchaseModel(7, "Proteksi", R.drawable.ic_proteksi),
             PurchaseModel(8, "Lainnya", R.drawable.ic_other),
         )
-        PurchaseAdapter(item, object: PurchaseAdapter.AdapterListener{
+        PurchaseAdapter(items, object: PurchaseAdapter.AdapterListener{
             override fun onClick(purchaseModel: PurchaseModel) {
                 Toast.makeText(applicationContext, purchaseModel.text, Toast.LENGTH_SHORT).show()
+            }
+        })
+    }
+
+    val promoAdapter by lazy {
+        val items = mutableListOf<PromoModel>(
+            PromoModel(1, R.drawable.img_promo),
+            PromoModel(2, R.drawable.img_promo),
+            PromoModel(3, R.drawable.img_promo)
+        )
+        PromoAdapter(items, object : PromoAdapter.AdapterListener{
+            override fun onClick(promoModel: PromoModel) {
+                Toast.makeText(applicationContext, promoModel.id, Toast.LENGTH_SHORT).show()
             }
         })
     }
