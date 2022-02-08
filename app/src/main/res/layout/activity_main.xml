@@ -31,10 +31,11 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             >
 
             <ImageView
+                tools:visibility="gone"
                 android:id="@+id/iv_background_main"
                 android:layout_width="0dp"
                 android:layout_height="150dp"
@@ -300,7 +301,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:text="Rekomendasi"
+                android:text="Rekomendasi Pilihan"
                 android:textSize="18sp"
                 android:textColor="@color/ovo"
                 android:textStyle="bold"
@@ -310,15 +311,19 @@
                 />
 
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rec_view_rekomendation"
+                android:id="@+id/rec_view_recomendation"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginTop="20dp"
-                tools:listitem="@layout/adapter_purchase"
+                tools:listitem="@layout/adapter_recomendation"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                 android:orientation="horizontal"
                 app:spanCount="4"
-                tools:visibility="visible"
+                tools:visibility="gone"
+                tools:itemCount="5"
+                android:clipToPadding="false"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tv_recomendation"
@@ -332,8 +337,179 @@
                 android:background="@color/line"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/rec_view_rekomendation"
+                app:layout_constraintTop_toBottomOf="@id/rec_view_recomendation"
                 />
+
+            <TextView
+                android:id="@+id/tv_financial"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Finansial Kamu"
+                android:textSize="18sp"
+                android:textColor="@color/ovo"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@id/card_view_payment"
+                app:layout_constraintEnd_toEndOf="@id/card_view_payment"
+                app:layout_constraintTop_toBottomOf="@id/view_line_recomendation"
+                />
+
+            <com.google.android.material.card.MaterialCardView
+                tools:visibility="gone"
+                android:id="@+id/card_view_financial"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="2dp"
+                app:layout_constraintStart_toStartOf="@id/card_view_payment"
+                app:layout_constraintEnd_toEndOf="@id/card_view_payment"
+                app:layout_constraintTop_toBottomOf="@id/tv_financial"
+                >
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/iv_financial"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/img_financial"
+                        android:adjustViewBounds="true"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_subfinancial"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="20dp"
+                        android:text="Saatnya kamu mulai investasi dengan aman dan pasti"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/btn_financial"
+                        app:layout_constraintTop_toBottomOf="@id/iv_financial"
+                        />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_financial"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="Mulai"
+                        app:cornerRadius="10dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/iv_financial"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <View
+                android:id="@+id/view_line_financial"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/line"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/card_view_financial"
+                />
+
+            <TextView
+                android:id="@+id/tv_intro"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Kenali OVO Lebih Dekat"
+                android:textSize="18sp"
+                android:textColor="@color/ovo"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@id/card_view_payment"
+                app:layout_constraintEnd_toEndOf="@id/card_view_payment"
+                app:layout_constraintTop_toBottomOf="@id/view_line_financial"
+                />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rec_view_intro"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                tools:listitem="@layout/adapter_intro"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:orientation="horizontal"
+                app:spanCount="4"
+                tools:visibility="gone"
+                tools:itemCount="5"
+                android:clipToPadding="false"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_intro"
+                />
+
+            <View
+                android:id="@+id/view_line_intro"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/line"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rec_view_intro"
+                />
+
+            <TextView
+                android:id="@+id/tv_interest"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Yang Menarik di OVO"
+                android:textSize="18sp"
+                android:textColor="@color/ovo"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@id/card_view_payment"
+                app:layout_constraintEnd_toEndOf="@id/card_view_payment"
+                app:layout_constraintTop_toBottomOf="@id/view_line_intro"
+                />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rec_view_interest"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                tools:listitem="@layout/adapter_interest"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:orientation="horizontal"
+                app:spanCount="4"
+                tools:visibility="visible"
+                tools:itemCount="5"
+                android:clipToPadding="false"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_interest"
+                />
+
+            <View
+                android:id="@+id/view_line_interest"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/line"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rec_view_interest"
+                />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.core.widget.NestedScrollView>

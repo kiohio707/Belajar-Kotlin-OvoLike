@@ -10,10 +10,12 @@
         <entry key="..\:/Semester 8/Belajar Android/OvoLike/app/src/main/res/drawable/ic_topup.xml" value="0.15925925925925927" />
         <entry key="..\:/Semester 8/Belajar Android/OvoLike/app/src/main/res/drawable/ic_transfer.xml" value="0.15925925925925927" />
         <entry key="..\:/Semester 8/Belajar Android/OvoLike/app/src/main/res/drawable/ic_tv.xml" value="0.3828125" />
-        <entry key="..\:/Semester 8/Belajar Android/OvoLike/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Semester 8/Belajar Android/OvoLike/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Semester 8/Belajar Android/OvoLike/app/src/main/res/layout/adapter_interest.xml" value="0.3381294964028777" />
+        <entry key="..\:/Semester 8/Belajar Android/OvoLike/app/src/main/res/layout/adapter_intro.xml" value="0.22" />
         <entry key="..\:/Semester 8/Belajar Android/OvoLike/app/src/main/res/layout/adapter_promo.xml" value="0.11" />
         <entry key="..\:/Semester 8/Belajar Android/OvoLike/app/src/main/res/layout/adapter_purchase.xml" value="0.351010101010101" />
-        <entry key="..\:/Semester 8/Belajar Android/OvoLike/app/src/main/res/layout/adapter_recomendation.xml" value="0.1" />
+        <entry key="..\:/Semester 8/Belajar Android/OvoLike/app/src/main/res/layout/adapter_recomendation.xml" value="0.33" />
         <entry key="..\:/Semester 8/Belajar Android/OvoLike/app/src/main/res/menu/menu_notification_main.xml" value="0.18" />
       </map>
     </option>

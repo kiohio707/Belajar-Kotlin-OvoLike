@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:cardCornerRadius="10dp"
+    android:layout_margin="5dp"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/iv_interest"
+            android:layout_width="175dp"
+            android:layout_height="wrap_content"
+            tools:src="@drawable/img_interest"
+            android:adjustViewBounds="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/tv_interest"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            tools:text="Pusat Bantuan"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/ovo"
+            android:gravity="center"
+            app:layout_constraintStart_toStartOf="@id/iv_interest"
+            app:layout_constraintEnd_toEndOf="@id/iv_interest"
+            app:layout_constraintTop_toBottomOf="@+id/iv_interest"
+            />
+
+        <TextView
+            android:id="@+id/tv_desc_interest"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            tools:text="Punya Kendala atau Pertanyaan Terkait OVO? Kamu Bisa Kirim Disini"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            android:layout_marginTop="5dp"
+            app:layout_constraintStart_toStartOf="@id/iv_interest"
+            app:layout_constraintEnd_toEndOf="@id/iv_interest"
+            app:layout_constraintTop_toBottomOf="@+id/tv_interest"
+            tools:ignore="SmallSp" />
+
+        <TextView
+            android:id="@+id/tv_link_interest"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            tools:text="Pusat Bantuan"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/teal_200"
+            android:gravity="center"
+            app:layout_constraintStart_toStartOf="@id/iv_interest"
+            app:layout_constraintEnd_toEndOf="@id/iv_interest"
+            app:layout_constraintTop_toBottomOf="@+id/tv_desc_interest"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+</com.google.android.material.card.MaterialCardView>
